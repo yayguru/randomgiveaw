@@ -1,0 +1,201 @@
+.how-it-works {
+  margin-top: 4rem;
+  padding: 3rem 0;
+}
+
+.section-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #00ff00;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.section-main-title::before {
+  content: '>>> ';
+  color: #006600;
+}
+
+.section-main-title::after {
+  content: ' <<<';
+  color: #006600;
+}
+
+.section-main-subtitle {
+  text-align: center;
+  color: #00cc00;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.section-main-subtitle::before {
+  content: '// ';
+  color: #006600;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.step-card {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ff00;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.03) 2px,
+    rgba(0, 255, 0, 0.03) 4px
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.step-card:hover::before {
+  opacity: 1;
+}
+
+.step-card:hover {
+  border-color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #00ff00;
+  position: relative;
+  border: 1px solid #00ff00;
+  background: rgba(0, 255, 0, 0.05);
+}
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ff00;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.step-title::before {
+  content: '> ';
+  color: #006600;
+}
+
+.step-description {
+  color: #00cc00;
+  line-height: 1.6;
+  position: relative;
+  font-size: 0.875rem;
+}
+
+.tech-details {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ff00;
+  padding: 2.5rem;
+}
+
+.tech-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #00ff00;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tech-title::before {
+  content: '>>> ';
+  color: #006600;
+}
+
+.tech-title::after {
+  content: ' <<<';
+  color: #006600;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tech-item {
+  padding: 1.5rem;
+  background: #000000;
+  border: 1px solid #006600;
+  transition: all 0.2s ease;
+}
+
+.tech-item:hover {
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.tech-item strong {
+  display: block;
+  color: #00ff00;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tech-item strong::before {
+  content: '> ';
+  color: #006600;
+}
+
+.tech-item p {
+  color: #00cc00;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .section-main-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-details {
+    padding: 1.5rem;
+  }
+}
